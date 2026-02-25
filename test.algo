@@ -1,0 +1,23 @@
+ALGORITHM check_algo
+VAR
+    nb_caract:INTEGER=0
+    nb_mot:INTEGER=0
+    nb_voille:INTEGER=0
+    i:=CHAR
+    phrase:=STRING
+BEGIN
+    write("donner votre phrase")
+    read(phrase)
+    for i from phrase DO 
+      nb_caract+=1
+      if (i==" ")
+        nb_mot+=1
+      elseif(i=="a" || i=="u" || i=="e" || i=="o")
+       nb_voille +=1
+      end_if
+    end_for
+    write("le nbr de craractaire : ",nb_caract)
+    write("le nbr de mot : ",nb_mot)
+    write("le nbr de voille  : ",nb_voille)
+
+END
